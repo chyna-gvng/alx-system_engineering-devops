@@ -10,4 +10,4 @@ sed -i 's/listen\s*80/listen 0.0.0.0:80/' /etc/nginx/sites-available/default
 
 service nginx start
 
-echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html

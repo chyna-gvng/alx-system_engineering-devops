@@ -13,7 +13,6 @@ file { '/etc/nginx/sites-available/default':
 
                 server_name _;
 
-                # Custom HTTP header
                 add_header X-Served-By $hostname;
 
                 location / {

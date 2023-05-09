@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 3-count.py """
+""" 100-count.py """
 import json
 import requests
 

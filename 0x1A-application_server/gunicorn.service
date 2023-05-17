@@ -1,5 +1,5 @@
 [Unit]
-Description=Gunicorn application server running AirBnB_clone_v4
+Description=Gunicorn Service
 After=network.target
 
 [Service]

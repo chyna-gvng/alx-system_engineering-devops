@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/app/web_dynamic
+ExecStart=/usr/bin/gunicorn -w 3 -b 0.0.0.0:5003 web_dynamic.2-hbnb:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

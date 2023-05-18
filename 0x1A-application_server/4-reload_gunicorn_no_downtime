@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # bash script to reload gunicorn in a graceful way.
 
-ps aux | grep gunicorn | awk '{ print $2 }' | xargs kill -HUP
+master_pid=$(pgrep -f gunicorn)
+kill -HUP $master_pid
+wait $master_pid
+gunicorn --bind 0.0.0.0:8001 --workers 4 web_flask.0-hello_route:app
